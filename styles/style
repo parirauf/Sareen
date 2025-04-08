@@ -1,0 +1,81 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+}
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.banner-text p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #004d4d;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #003737;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+#collections {
+  background-color: #fff;
+}
+#collections h2,
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#collections p,
+#contact p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+#contact {
+  background-color: #e8e8e8;
+}
