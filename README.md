@@ -1,5 +1,4 @@
 # Sareen
-# Sareen Haven
 
 Welcome to **Sareen Haven** — a boutique brand that blends bold elegance with soulful femininity.
 
