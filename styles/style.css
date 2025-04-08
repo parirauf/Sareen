@@ -1,81 +1,151 @@
-/* Reset & Base */
-* {
+
+/*───────────────────────────────────────────
+  Variables & Global Settings
+───────────────────────────────────────────*/
+:root {
+  /* Colors */
+  --color-bg:    #f9f9f9;
+  --color-light: #e8e8e8;
+  --color-dark:  #333;
+  --color-teal:  #004d4d;
+  --color-teal-dark: #003737;
+  --overlay-bg:  rgba(0, 0, 0, 0.5);
+  --text-light:  #fff;
+  --text-medium: #555;
+
+  /* Typography */
+  --font-base:   'Georgia', serif;
+  --font-size:   1rem;       /* 16px */
+  --line-height: 1.6;
+
+  /* Layout */
+  --max-width:   62.5rem;    /* 1000px */
+  --gutter:      2rem;       /* 32px */
+  --radius:      0.5rem;     /* 8px */
+  --transition:  0.3s ease;
+}
+
+/*───────────────────────────────────────────
+  Reset & Base
+───────────────────────────────────────────*/
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: 'Georgia', serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+
+html {
+  font-size: var(--font-size);
 }
 
-/* Banner */
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: var(--line-height);
+}
+
+/*───────────────────────────────────────────
+  Banner
+───────────────────────────────────────────*/
 .banner {
   position: relative;
   overflow: hidden;
 }
+
 .banner img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .banner-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+  background-color: var(--overlay-bg);
   padding: 2rem;
   text-align: center;
-  border-radius: 8px;
-  color: #fff;
+  border-radius: var(--radius);
+  color: var(--text-light);
+  max-width: 90%;        /* keep text from running full width */
 }
+
 .banner-text h1 {
-  font-size: 3rem;
+  font-size: 3rem;       /* 48px */
   margin-bottom: 0.5rem;
 }
+
 .banner-text p {
-  font-size: 1.25rem;
+  font-size: 1.25rem;    /* 20px */
   margin-bottom: 1.5rem;
 }
+
+/*───────────────────────────────────────────
+  Button
+───────────────────────────────────────────*/
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #004d4d;
-  color: #fff;
+  background-color: var(--color-teal);
+  color: var(--text-light);
   text-decoration: none;
   font-size: 1rem;
   border-radius: 25px;
-  transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #003737;
+  transition: background-color var(--transition);
 }
 
-/* Sections */
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-teal-dark);
+}
+
+/*───────────────────────────────────────────
+  Sections
+───────────────────────────────────────────*/
 section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
+  padding: 4rem var(--gutter);
+  max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
 }
+
 #collections {
-  background-color: #fff;
+  background-color: var(--text-light);
 }
+
+#contact {
+  background-color: var(--color-light);
+}
+
 #collections h2,
 #contact h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 #collections p,
 #contact p {
   font-size: 1rem;
-  color: #555;
-  max-width: 600px;
+  color: var(--text-medium);
+  max-width: 37.5rem;     /* 600px */
   margin: 0 auto 2rem;
 }
-#contact {
-  background-color: #e8e8e8;
+
+/*───────────────────────────────────────────
+  Responsive Tweaks
+───────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+  .banner-text p {
+    font-size: 1.125rem;
+  }
+  section {
+    padding: 3rem 1rem;
+  }
 }
