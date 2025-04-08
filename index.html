@@ -9,6 +9,30 @@
 <body>
   <!-- Hero Banner -->
   <header class="hero">
+    .hero {
+  background-image: url('images/D1.jpg)}
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-text {
+  position: re
     <div class="hero-text">
       <h1>Step into Elegance</h1>
       <p>Where couture meets culture</p>
@@ -35,7 +59,7 @@
        
     <div class="collection-items">
       <div class="collection">
-            <img src="images/D1.jpg" alt="Collection">
+            
         <h3>Regal Radiance</h3>
         <p>Gowns for grand occasions</p>
       </div>
