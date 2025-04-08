@@ -1,0 +1,134 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f5f0eb;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/Sar_ban.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px 30px;
+  border-radius: 12px;
+  max-width: 80%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px #d4af37);
+}
+
+.brand-name {
+  font-size: 3.2em;
+  color: #fff;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.4em;
+  color: #d4af37;
+  margin-bottom: 25px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Explore Button */
+.explore-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #004d4d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn:hover {
+  background-color: #007070;
+  transform: translateY(-2px);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #004d4d #eee;
+}
+
+.gallery-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-row::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.gallery-row::-webkit-scrollbar-thumb {
+  background-color: #004d4d;
+  border-radius: 10px;
+}
+
+/* Gallery Item with Caption */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+}
+
+.gallery-item img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #444;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+}
